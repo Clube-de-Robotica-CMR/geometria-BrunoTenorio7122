@@ -1,6 +1,7 @@
 CC := gcc
 CFLAGS := -Wall -Wextra -Werror 
-CLIBS := geometria.c lib/cs50.c -Ilib
+SRCS := main.c geometria.c lib/cs50.c
 
-main: main.c
-	$(CC) $(CFLAGS) $< ${CLIBS} -o geometria
+geometria: $(SRCS)
+	$(CC) $(CFLAGS) $(SRCS) -o geometria
+#alterado por motivos citados no outro desafio, o mais facil
